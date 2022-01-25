@@ -10,4 +10,12 @@
 }
 .container {
     width: 50%;
+    padding: 25px;
+}
+.mainpic {
+    width: 100%;
+}
+footer {
+    background-color: rgb(255, 228, 196);
+    text-align: center;
 }
