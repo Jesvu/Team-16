@@ -1,5 +1,12 @@
 .navbar {
     position: sticky;
+    background-color: rgb(255, 228, 196);
+    padding: 10px;
+    
+}
+.navbar a:hover{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
 }
 .container {
     width: 50%;
