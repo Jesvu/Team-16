@@ -6,16 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-</head>
+    <link rel="stylesheet" type="text/css" href="https://jesvu.github.io/Team-16/css/main.css">
+  </head>
 <body>
-  
+
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-rgb(255, 228, 196)">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="reservation.html">Order</a>
+          </li>
+        </ul> 
+      </div>
+    </div>
+  </nav>
+
+  <article class="picture">
+  <div class="container">
+    <div class="row">
     <div class="container-lg my-5">
         <div class="row ">
-            <div class="p-5 bg-secondary text-light text-center"><h1>Reservations</h1>
+            <div class="p-5 text-center" style="background-color: rgb(255, 228, 196)"><h1>Reservations</h1>
             <p>You can also get our service to your home! Just fill in your information down below and
                 we will contact you.</p>
             </div>
-            <div class="p-5 bg-secondary text-light ">
+            <div class="p-5" style="background-color: rgb(255, 228, 196)">
             <form>
             <div class="form-group col-5">
               <label for="emailAddress">Email Address</label>
@@ -33,8 +59,32 @@
             </div>
           </div>
         </div>
-
-        
+      </article>
+        <footer>
+          <div class="container">
+            <div class="row">
+              
+              <sidebar class="col-3">
+                <p>Sus street 5
+                  <br> 13100 Hämeenlinna
+                </p>
+    
+              </sidebar>
+              <mainbar class="col-6">
+                <p>Ma-Pe: 10:30-21:00
+                  <br> La: 11:00-21:00
+                  <br> Su: 12:00-21:00
+                </p>
+              </mainbar>
+              <sidebar class="col-3">
+                <p>0404758534
+                  <br>business@team16.fi
+                </p>
+    
+              </sidebar>
+          </div>
+    
+        </footer>
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
