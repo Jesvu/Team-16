@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<title> Menu</title>
+<!---Style made by Taneli--->
+<style>
+    body{
+        background-color: rgb(255, 228, 196);
+    }
+    h1{
+        text-align: center;
+        border-top: solid 2px black;
+    }
+    h2{
+        text-align: left;
+        font-size: 30px;
+        padding: 5px;
+        border-bottom: solid 2px black;
+    }
+    .custom-container{
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        width: 60%;
+        border: solid 2px brown;
+        background-color: burlywood;
+        padding: 15px;
+        border-radius: 15px;
+        
+    }
+    .pizza{
+        margin-right: 20px;
+        flex: 1;
+        background-color: rgb(255, 228, 196);
+    }
+    .kebab{
+        flex: 1;
+        margin-right: 20px;
+        background-color: rgb(255, 228, 196);
+    }
+    .drinks{
+        flex: 1;
+        
+        background-color: rgb(255, 228, 196);
+    }
+    img{
+        padding-top: 25px;
+    }
+</style>
+</head>
+<body>
+  <!---Navbar designed and made by Ville--->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-rgb(255, 228, 196)">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="reservation.html">Order</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!---Made by Taneli--->
+      <header><h1> This is the menu</h1></header>
+      <div class="custom-container">
+
+    <div class="pizza">
+        <h2>Pizza</h2>
+        <ul>
+            <li>Bolognese</li>
+            <li>Opera</li>
+            <li>Tropicana</li>
+            <li>Americana</li>
+        </ul>
+    </div>
+
+    <div class="kebab">
+        <h2>Kebab</h2>
+        <ul>
+        <li>Iskender kebab</li>
+        <li>Kebab with fries</li>
+        <li>Kebab with rice</li>
+        <li>Chicken kebab</li>
+        </ul>
+
+    </div>
+
+    <div class="drinks">
+        <h2>Drinks</h2>
+        <ul>
+        <li>Water</li>
+        <li>Milk</li>
+        <li>Pepsi</li>
+        <li>Fanta</li>
+        </ul>
+    </div>
+    </div>
+
+    <div>
+        <img class="mainpic" src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg" alt="pizza">
+    </div>
+
+    <!---Footer designed and made by Ville--->
+    <footer>
+        <div class="container">
+          <div class="row">
+            
+            <sidebar class="col-3">
+              <p>Sus street 5
+                <br> 13100 Hämeenlinna
+              </p>
+  
+            </sidebar>
+            <mainbar class="col-6">
+              <p>Ma-Pe: 10:30-21:00
+                <br> La: 11:00-21:00
+                <br> Su: 12:00-21:00
+              </p>
+            </mainbar>
+            <sidebar class="col-3">
+              <p>0404758534
+                <br>business@team16.fi
+              </p>
+  
+            </sidebar>
+        </div>
+  
+      </footer>
+
+    
+</body>
+</html>
