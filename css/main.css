@@ -1,3 +1,4 @@
+/* Made by Ville Lahtinen */
 .navbar {
     position: sticky;
     background-color: rgb(255, 228, 196);
@@ -30,4 +31,9 @@ footer {
 
 article {
     padding: 10px;
+}
+/* Made by Jesse Vuorela */
+.picture {
+    background-image: url("https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg");
+    background-size:cover;
 }
