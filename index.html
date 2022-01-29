@@ -1,14 +1,75 @@
+<!--Made by Ville Lahtinen-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Web Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Home</title>
 </head>
 <body>
-    <h1>This will be our heading</h1>
-    <p>Can you see this? Hope you can.</p>
-    <p>Ville was here</p>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-rgb(255, 228, 196)">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="reservation.html">Order</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+      </nav>
+      <header>
+        <img class="mainpic" src="https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg" alt="pizza">
+      </header>
+    <div class="container">
+      <div class="row">
+        <sidebar class="col-6">
+          <img class="pic" src="https://cdn.pixabay.com/photo/2017/06/12/07/32/trastevere-2394554_1280.jpg" alt="building">
+        </sidebar>
+        <article class="col-4">
+        <h1>Little bit about us</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In iaculis nunc sed augue lacus viverra vitae congue eu. Sit amet tellus cras adipiscing enim. Amet risus nullam eget felis eget nunc. In tellus integer feugiat scelerisque varius morbi enim nunc. Sed risus pretium quam vulputate dignissim suspendisse. Faucibus a pellentesque sit amet porttitor. Purus viverra accumsan in nisl nisi. Velit egestas dui id ornare arcu odio ut sem. Dictum varius duis at consectetur lorem. Varius duis at consectetur lorem.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          
+          <sidebar class="col-3">
+            <p>Sus street 5
+              <br> 13100 Hämeenlinna
+            </p>
+
+          </sidebar>
+          <mainbar class="col-6">
+            <p>Ma-Pe: 10:30-21:00
+              <br> La: 11:00-21:00
+              <br> Su: 12:00-21:00
+            </p>
+          </mainbar>
+          <sidebar class="col-3">
+            <p>0404758534
+              <br>business@team16.fi
+            </p>
+
+          </sidebar>
+      </div>
+
+    </footer>
 </body>
+
 </html>
