@@ -101,13 +101,17 @@ footer {
     padding:10px;
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width:570px){
     .box-1, .box-2, .box-3{
     width:90%;
     }
 
     .row{
     font-size:9px;
+    }
+
+    .navlogo{
+        width: 10%;
     }
 
 }
