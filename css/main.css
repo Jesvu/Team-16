@@ -113,5 +113,10 @@ footer {
     .navlogo{
         width: 10%;
     }
+}
 
+@media screen and (max-width:370px){
+    .row{
+        font-size:7px;
+        }
 }
