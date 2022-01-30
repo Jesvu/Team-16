@@ -28,6 +28,9 @@ footer {
     text-align: center;
 }
 
+article{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg");
+
 article {
     padding: 10px;
 }
@@ -35,4 +38,50 @@ article {
 .picture {
     background-image: url("https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg");
     background-size:cover;
+    padding-top:100px;
+    padding-bottom:130px;
+}
+
+.container-1{
+    display:flex;
+    justify-content: center;
+}
+
+.container-1 div{
+    border:1px black solid;
+    padding:10px;
+}
+
+.container-2{
+    display:flex;
+    justify-content: center;
+}
+
+.container-2 div{
+    border:1px black solid;
+    padding:10px;
+}
+
+.container-3{
+    display:flex;
+    justify-content: center;
+}
+
+.box-1{
+    background-color: rgb(255, 228, 196);
+    text-align: center;
+    width:50%;
+}
+
+.box-2{
+    background-color: rgb(255, 228, 196);
+    text-align: center;
+    width: 50%;
+    height:fit-content;
+}
+
+.box-3{
+    background-color: rgb(255, 228, 196);
+    width:50%;
+    padding:10px;
 }
