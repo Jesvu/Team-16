@@ -27,13 +27,6 @@ footer {
     background-color: rgb(255, 228, 196);
     text-align: center;
 }
-
-article{
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg");
-
-article {
-    padding: 10px;
-}
 /* Made by Jesse Vuorela */
 .picture {
     background-image: url("https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg");
