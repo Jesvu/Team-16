@@ -47,8 +47,14 @@
     }
     .drinks{
         flex: 1;
-        
+        margin-right: 20px;
         background-color: rgb(255, 228, 196);
+    }
+    @media only screen and (max-width: 600px) {
+      #items{
+        flex-direction: column;
+        display: flex;
+      }
     }
 </style>
 </head>
@@ -83,7 +89,7 @@
 
       <!--Made by Taneli-->
       <header><h1> This is the menu</h1></header>
-      <div class="custom-container">
+      <div class="custom-container" id="items">
 
     <div class="pizza">
         <h2>Pizza</h2>
