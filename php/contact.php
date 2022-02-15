@@ -4,6 +4,14 @@ if(isset($_POST['submit'])){
    $pNumber = $_POST['pNumber'];
    $subject = $_POST['subject'];
    $message = $_POST['message'];
+/*
+   if (empty($email) || empty($pNumber) || empty($subject)
+      empty($message)){
+         header("Location:..");
+
+      }
+*/
+      
    
     $to = "jesse21008@student.hamk.fi";
     $headers = "From: " .$email;
@@ -12,5 +20,6 @@ if(isset($_POST['submit'])){
 
    mail($to, $subject, $txt, $headers);
    header("Location:../index.html");
+      
 }
 ?>
