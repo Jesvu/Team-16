@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script>
+        function lahetaUser(lomake){
+            var user=new Object();
+            user.username=lomake.username.value;
+            user.password=lomake.password.value;
+            var jsonUser=JSON.stringify(user);
+            document.getElementById("result").innerHTML=jsonUser;	
+            
+            xmlhttp = new XMLHttpRequest();
+        
+            xmlhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("result2").innerHTML = this.responseText;
+              }
+            };
+            
+            xmlhttp.open("POST", "php/register.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("user=" + jsonUser);
+        }
+        </script>
+</head>
+<body>
+    <form >
+        username: <input type='text' name='username' value='' placeholder='Käyttäjätunnus...'><br>
+        password: <input type='text' name='password' value='' placeholder='Salasana...'><br>
+        <input type='button' name='ok' value='Lähetä' onclick='lahetaUser(this.form);'>
+        </form>
+        <p> After registering you can return <a href="home.html">Back to mainpage</a>
+        </p>
+        <p id='result' href="home.html">
+        </p>
+        <p id="result2">Insert your password and username</p>
+</body>
+</html>
