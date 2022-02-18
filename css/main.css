@@ -129,3 +129,13 @@ footer {
         font-size:7px;
         }
 }
+
+.register .login{
+    display:flex;
+    justify-content: center;
+}
+
+.bg{
+    background-image: url("https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg");
+    background-size:cover;
+}

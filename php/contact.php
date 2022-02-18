@@ -4,22 +4,21 @@ if(isset($_POST['submit'])){
    $pNumber = $_POST['pNumber'];
    $subject = $_POST['subject'];
    $message = $_POST['message'];
-/*
+
    if (empty($email) || empty($pNumber) || empty($subject)
       empty($message)){
-         header("Location:..");
-
+         header("Location:../index.html");
+         exit;
       }
-*/
-      
-   
-    $to = "jesse21008@student.hamk.fi";
-    $headers = "From: " .$email;
-    $txt = "Sender Phonenumber: " .$pNumber.
+   //Valitaan vastaanottajan sposti
+   $to = "jesse21008@student.hamk.fi";
+   //Tekstikentän tiedot, mitä lähetetään
+   $headers = "From: " .$email;
+   $txt = "Sender Phonenumber: " .$pNumber.
             "\nMessage: " .$message;
-
+   //spostin lähetys
    mail($to, $subject, $txt, $headers);
-   header("Location:../index.html");
-      
+   //Takaisin pääsivulle
+   header("Location:../index.html"); 
 }
 ?>

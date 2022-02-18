@@ -19,7 +19,7 @@
         border-top: solid 2px black;
     }
     h2{
-        text-align: left;
+        text-align: center;
         font-size: 30px;
         padding: 5px;
         border-bottom: solid 2px black;
@@ -125,10 +125,33 @@
         </ul>
     </div>
     </div>
-
-    <div>
-        <img class="mainpic" src="https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg" alt="pizza">
-    </div>
+    <!--Made by Jesse-->
+    <article class="picture">
+        <div class="container-1">
+            <div class="box-1">
+              <h2>Hello!</h2>
+              <p>Do you have any suggestions regarding our menu?<br>
+              Now you can make food suggestions to our menu. Just put your
+            food suggestion down below!</p>
+            </div>
+        </div>
+            <div class="container-3">
+              <div class="box-2">
+                <form action='php/food.php' method='post' class='contact-form'>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="food">Suggestion</label>
+                    <textarea class="form-control" name="food"></textarea>
+                  </div>
+                  <input type="submit" name="submit" class="btn btn-secondary"></button>
+                </form>
+              </div>
+            </div>
+    </article>
+    
 
     <!--Footer designed and made by Ville-->
     <footer>
