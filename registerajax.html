@@ -13,7 +13,7 @@
             user.username=lomake.username.value;
             user.password=lomake.password.value;
             var jsonUser=JSON.stringify(user);
-            document.getElementById("result").innerHTML=jsonUser;	
+            document.getElementById("result").innerHTML="registering succesful";	
             
             xmlhttp = new XMLHttpRequest();
         
@@ -67,9 +67,8 @@
         Password: <input type='text' name='password' value='' placeholder='Salasana...'><br>
         <input type='button' name='ok' value='Lähetä' onclick='lahetaUser(this.form);'>
         </form>
-        <p> After registering you can return <a href="home.html">Back to mainpage</a></p>
         <p id='result' href="home.html"></p>
-        <p id="result2">Insert your password and username</p>
+        <p> After registering you can return <a href="index.html">Back to mainpage</a></p>
         </div>
     </div>
         <footer>
