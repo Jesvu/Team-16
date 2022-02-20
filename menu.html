@@ -125,7 +125,26 @@
         </ul>
     </div>
     </div>
-    <!--Made by Jesse-->
+    <!--Made by Jesse Vuorela-->
+    <script>
+      function sendFood(form){
+        var suggestions=new Object();
+        suggestions.name=form.name.value;
+        suggestions.food=form.food.value;
+        var jsonFood=JSON.stringify(suggestions);
+        
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("result").innerHTML = this.responseText;
+          }
+        };
+        xmlhttp.open("POST", "../php/food.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("suggestions=" + jsonFood);	
+      }
+      </script>
+
     <article class="picture">
         <div class="container-1">
             <div class="box-1">
@@ -137,7 +156,7 @@
         </div>
             <div class="container-3">
               <div class="box-2">
-                <form action='php/food.php' method='post' class='contact-form'>
+                <form id="foodform" method='post' class='contact-form'>
                   <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" name="name" class="form-control">
@@ -146,8 +165,11 @@
                     <label for="food">Suggestion</label>
                     <textarea class="form-control" name="food"></textarea>
                   </div>
-                  <input type="submit" name="submit" class="btn btn-secondary"></button>
+                  <input type="submit" name="submit" onclick="sendFood(this.form);" class="btn btn-secondary"></button>
                 </form>
+                <p id="result">
+                Palaute tähän
+                </p>
               </div>
             </div>
     </article>
