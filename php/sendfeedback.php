@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["users"])){
+    header("Location:../login.html");
+    exit;
+}
+print "<h2>Kiitos palautteesta, ".$_SESSION["users"]."!</h2>";
+?>
+
 <?php 
 if(isset($_POST['submit'])){
    $email = $_POST['email'];
@@ -6,7 +15,7 @@ if(isset($_POST['submit'])){
    $message = $_POST['message'];
 
    if (empty($email) || empty($pNumber) || empty($subject) || empty($message)){
-         header("Location:../index.html");
+         
          exit;
       }
    //Valitaan vastaanottajan sposti
@@ -18,6 +27,7 @@ if(isset($_POST['submit'])){
    //spostin lähetys
    mail($to, $subject, $txt, $headers);
    //Takaisin pääsivulle
-   header("Location:../index.html"); 
 }
 ?>
+
+<a href='logout.php'>Log out</a>

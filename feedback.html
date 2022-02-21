@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order</title>
+    <script>
+      function lahetaUser(lomake){
+	var user=new Object();
+	user.username=lomake.username.value;
+	user.password=lomake.password.value;
+	var jsonUser=JSON.stringify(user);
+	
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+	  if (this.readyState == 4 && this.status == 200) {
+		    if (this.responseText=="ok"){
+		    	window.location.assign("php/sendfeedback.php");
+		    }
+		    else{
+			    document.getElementById("result").innerHTML = "Username or password wrong";
+		    }
+	  }
+	};
+	xmlhttp.open("POST", "php/login.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("user=" + jsonUser);	
+}
+      </script>
     <meta name="author" content="Jesse Vuorela">
     <meta name="description" content="Ordering Page">
     <!--faficon added by Ville Lahtinen-->

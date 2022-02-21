@@ -16,7 +16,6 @@
             document.getElementById("result").innerHTML="registering succesful";	
             
             xmlhttp = new XMLHttpRequest();
-        
             xmlhttp.onreadystatechange = function() {
               if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("result2").innerHTML = this.responseText;
@@ -68,6 +67,7 @@
         <input type='button' name='ok' value='Lähetä' onclick='lahetaUser(this.form);'>
         </form>
         <p id='result' href="home.html"></p>
+        
         <p> After registering you can return <a href="index.html">Back to mainpage</a></p>
         </div>
     </div>
