@@ -128,10 +128,10 @@
     <!--Made by Jesse Vuorela-->
     <script>
       function sendFood(form){
-        var suggestions=new Object();
-        suggestions.name=form.name.value;
-        suggestions.food=form.food.value;
-        var jsonFood=JSON.stringify(suggestions);
+        var menu=new Object();
+        menu.name=form.name.value;
+        menu.food=form.food.value;
+        var jsonFood=JSON.stringify(menu);
         
         xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
@@ -139,9 +139,9 @@
               document.getElementById("result").innerHTML = this.responseText;
           }
         };
-        xmlhttp.open("POST", "../php/food.php", true);
+        xmlhttp.open("POST", "php/food.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send("suggestions=" + jsonFood);	
+        xmlhttp.send("menu=" + jsonFood);	
       }
       </script>
 
@@ -159,13 +159,13 @@
                 <form id="foodform" method='post' class='contact-form'>
                   <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" value='' class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="food">Suggestion</label>
-                    <textarea class="form-control" name="food"></textarea>
+                    <input class="text" name="food" value='' class="form-control">
                   </div>
-                  <input type="submit" name="submit" onclick="sendFood(this.form);" class="btn btn-secondary"></button>
+                  <input type='button' name='ok' value='Send' onclick='sendFood(this.form);' class='btn btn-secondary'>
                 </form>
                 <p id="result">
                 Palaute tähän

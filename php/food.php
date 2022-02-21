@@ -1,8 +1,8 @@
 <?php
-$json = isset($_POST["suggestions"]) ? $_POST["suggestions"] = "";
+$json = isset($_POST["menu"]) ? $_POST["menu"] : "";
 
 //Tarkistetaan, onko kentät täytetty
-if(!($suggestions=checkJson($json))){
+if(!($menu=checkJson($json))){
     print "Fill everything!";
     exit;
 }
@@ -10,7 +10,7 @@ if(!($suggestions=checkJson($json))){
 mysqli_report(MYSQLI_REPORT_ALL ^ MYSQLI_REPORT_INDEX);
 //Testataan tietokantayhteyttä
 try{
-    $yhteys=mysqli_connect("db", "root", "password", "menu");
+    $yhteys=mysqli_connect("db", "root", "password", "pizzeria");
 }
 catch(Exception $e){
     print "Error!";
@@ -18,7 +18,7 @@ catch(Exception $e){
 }
 
 //sql-lause
-$sql="Insert into menu(name, food) values(?, ?)";
+$sql="insert into menu(name, food) values(?, ?)";
 //Valmistellaan sql-lause
 $stmt=mysqli_prepare($yhteys, $sql);
 //Sijoitetaan muuttujat oikeisiin paikkoihin
@@ -29,14 +29,14 @@ mysqli_stmt_execute($stmt);
 mysqli_close($yhteys);
 print "Thank you for suggestion!";
 //Funktio, joka tarkistaa onko kaikki tiedot täytetty
+
 function checkJson($json){
     if (empty($json)){
         return false;
     }
-    $suggestions=json_decode($json, false);
+    $menu=json_decode($json, false);
     if (empty($menu->name) || empty($menu->food)){
         return false;
     }
-    return $suggestions;
+    return $menu;
 }
-

@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
       empty($message)){
          header("Location:../index.html");
          exit;
-      }
+   }
    //Valitaan vastaanottajan sposti
    $to = "jesse21008@student.hamk.fi";
    //Tekstikentän tiedot, mitä lähetetään
@@ -21,4 +21,3 @@ if(isset($_POST['submit'])){
    //Takaisin pääsivulle
    header("Location:../index.html"); 
 }
-?>
