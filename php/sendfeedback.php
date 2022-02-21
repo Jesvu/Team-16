@@ -26,8 +26,9 @@ if(isset($_POST['submit'])){
             "\nMessage: " .$message;
    //spostin lähetys
    mail($to, $subject, $txt, $headers);
-   //Takaisin pääsivulle
 }
 ?>
 
-<a href='logout.php'>Log out</a>
+<?php
+echo'<a href="logout.php">Log out</a>';
+?>
