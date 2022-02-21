@@ -5,9 +5,9 @@ if(isset($_POST['submit'])){
    $subject = $_POST['subject'];
    $message = $_POST['message'];
 
-   if (empty($email) || empty($pNumber) || empty($subject)
+   if (empty($email) || empty($pNumber) || empty($subject) ||
       empty($message)){
-         header("Location:../index.html");
+         header("Location:../reservation.html");
          exit;
    }
    //Valitaan vastaanottajan sposti
