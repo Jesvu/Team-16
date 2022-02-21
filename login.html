@@ -16,7 +16,7 @@ function lahetaUser(lomake){
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
 		    if (this.responseText=="ok"){
-		    	window.location.assign("php/feedback.php");
+		    	window.location.assign("php/loginok.php");
 		    }
 		    else{
 			    document.getElementById("result").innerHTML = "Username or password wrong";
