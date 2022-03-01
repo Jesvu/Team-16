@@ -139,3 +139,47 @@ footer {
     background-image: url("https://cdn.pixabay.com/photo/2014/07/08/12/34/pizza-386717_1280.jpg");
     background-size:cover;
 }
+
+/*made by Taneli Nikkanen*/
+.custom-h1{
+    text-align: center;
+    border-top: solid 2px black;
+}
+.custom-h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+    border-bottom: solid 2px black;
+}
+.custom-container{
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    border: solid 2px brown;
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 15px;
+    
+}
+.pizza{
+    margin-right: 20px;
+    flex: 1;
+    background-color: rgb(255, 228, 196);
+}
+.kebab{
+    flex: 1;
+    margin-right: 20px;
+    background-color: rgb(255, 228, 196);
+}
+.drinks{
+    flex: 1;
+    margin-right: 20px;
+    background-color: rgb(255, 228, 196);
+}
+@media only screen and (max-width: 600px) {
+  #items{
+    flex-direction: column;
+    display: flex;
+  }
+}
